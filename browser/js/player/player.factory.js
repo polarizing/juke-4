@@ -37,6 +37,7 @@ juke.factory('PlayerFactory', function ($rootScope) {
   };
 
   player.isPlaying = function () {
+    console.log(playing);
     return playing;
   };
 

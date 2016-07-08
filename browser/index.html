@@ -18,6 +18,9 @@
     <script src="/js/artist/artist.factory.js" defer></script>
     <script src="/js/artist/artist.states.js" defer></script>
     <script src="/js/song/song.factory.js" defer></script>
+    <script src="/js/playlist/playlist.states.js" defer></script>
+    <script src="/js/playlist/playlist.controller.js" defer></script>
+    <script src="/js/playlist/playlist.factory.js" defer></script>
   </head>
   <body ng-app="juke">
     <div id="main" class="container-fluid">
@@ -36,12 +39,23 @@
             </h4>
           </section>
           <hr>
-          <section>
+
+
+<!--           <playlist></playlist>
+ -->          
+          <section ng-controller="PlaylistCtrl" >
             <h4 class="text-muted">PLAYLISTS</h4>
+            <!-- enter code -->
+            <p class="playlist-item" ng-repeat = "playlist in playlists">
+              <a ui-sref="singlePlaylist({playlistId: playlist.id})">{{playlist.name}}</a>
+            </p>
+
             <p>
-              <a class="btn btn-primary btn-block"><span class="glyphicon glyphicon-plus"></span> PLAYLIST</a>
+              <a ui-sref='newPlaylist' class="btn btn-primary btn-block"><span class="glyphicon glyphicon-plus"></span> PLAYLIST</a>
             </p>
           </section>
+
+
         </sidebar>
       </div>
 

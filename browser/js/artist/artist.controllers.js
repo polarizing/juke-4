@@ -3,9 +3,9 @@
 /* ARTISTS (PLURAL) CONTROLLER */
 
 juke.controller('ArtistsCtrl', function ($scope, allArtists) {
-
   $scope.artists = allArtists;
 
+  $scope.artistFilter = {};
 });
 
 /* ARTIST (SINGULAR) CONTROLLER */
